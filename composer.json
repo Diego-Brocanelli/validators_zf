@@ -1,0 +1,26 @@
+{
+    "name": "diego-brocanelli/validators-zf",
+    "description": "Validators CPF, CNPJ and Date for Zend Framework",
+    "type": "library",
+    "license": "BSD-3",
+    "authors": [
+        {
+            "name": "Diego Brocanelli",
+            "email": "contato@diegobrocanelli.com.br"
+        }
+    ],
+    "minimum-stability": "dev",
+    "autoload":{
+        "psr-4":{
+            "DiegoBrocanelli\\":"src\\"
+        },
+        "psr-0":{
+            "DiegoBrocanelli\\":"src\\"
+        }
+    },
+    "require": {
+        "zendframework/zend-filter": "^2.7",
+        "zendframework/zend-validator": "^2.8",
+        "diego-brocanelli/random-data": "dev-master"
+    }
+}
