@@ -9,7 +9,7 @@
             "email": "contato@diegobrocanelli.com.br"
         }
     ],
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "autoload":{
         "psr-4":{
             "DiegoBrocanelli\\":"src\\"
