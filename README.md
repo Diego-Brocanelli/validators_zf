@@ -6,12 +6,15 @@ Esta library, contempla:
    - CNPJ
    - Data (pt-br)
 
-# Intall
+# Install
+
 ##### Composer
+
 Packagists
 ```
-composer require 
+composer require diego-brocanelli/validators-zf dev-master
 ```
+
 Na raiz do projeto, execute o comando.
 ```
 composer install
@@ -22,7 +25,7 @@ composer install
 php phpunit.phar tests/
 ```
 
-# Implementação na entity ZF.
+# CPF Validator - Implementação na entity ZF .
 ```
 $inputFilter->add(array(
                 'name'     => 'cpf',
@@ -50,5 +53,5 @@ $inputFilter->add(array(
 # To-do list  
 
 * [X] CPF
-* [] CNPJ
-* [] Date
+* [ ] CNPJ
+* [ ] Date
