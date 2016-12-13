@@ -44,7 +44,32 @@ $inputFilter->add(array(
                         ),
                     ),
                     array(
-                        'name' => 'DiegoBrocanelli\Validators\CPF' // basta somente inserir a namespace.
+                        'name' => 'DiegoBrocanelli\Validators\CPF' // Inserir a namespace.
+                    ),
+                ),
+            ));
+```
+
+# CNPJ Validator - Implementação na entity ZF .
+```
+$inputFilter->add(array(
+                'name'     => 'cnpj',
+                'required' => true,
+                'filters'  => array(
+                    array('name' => 'StripTags'),
+                    array('name' => 'StringTrim'),
+                ),
+                'validators' => array(
+                    array(
+                        'name'    => 'StringLength',
+                        'options' => array(
+                            'encoding' => 'UTF-8',
+                            'min'      => 14,
+                            'max'      => 14,
+                        ),
+                    ),
+                    array(
+                        'name' => 'DiegoBrocanelli\Validators\CNPJ' // Inserir a namespace.
                     ),
                 ),
             ));
@@ -53,5 +78,5 @@ $inputFilter->add(array(
 # To-do list  
 
 * [X] CPF
-* [ ] CNPJ
+* [X] CNPJ
 * [ ] Date
