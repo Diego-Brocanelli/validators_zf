@@ -1,5 +1,5 @@
 # Validators Zend Framework
-Quem nunca teve a necessidade de validar CPF, CNPJ e data. Claro que a maioria, pois são informações muito comuns no dia a dia, o intuito deste reposiório é facilitar a validação no Zend Framework, tranzendo com isso mais agilidade em seu desenvolvimento.
+Quem nunca teve a necessidade de validar CPF, CNPJ e data. Claro que a maioria, pois são informações muito comuns no dia a dia, o intuito deste reposiório é facilitar a validação no Zend Framework, oferecendo maior agilidade para o seu desenvolvimento.
 
 Esta library, contempla:
    - CPF
