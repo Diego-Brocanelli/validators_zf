@@ -10,14 +10,16 @@ Esta library, contempla:
 
 ##### Composer
 
-Packagists
 ```
 composer require diego-brocanelli/validators-zf dev-master
 ```
-
-Na raiz do projeto, execute o comando.
+ou inserindo no arquivo composer.json e executanto comando composer isntall.
 ```
-composer install
+{
+    "require": {
+        "diego-brocanelli/validators-zf":"dev-master"
+    }
+}
 ```
 
 # Tests
