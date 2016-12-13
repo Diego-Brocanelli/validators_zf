@@ -21,6 +21,6 @@
     "require": {
         "zendframework/zend-filter": "^2.7",
         "zendframework/zend-validator": "^2.8",
-        "diego-brocanelli/random-data": "dev-master"
+        "diego-brocanelli/random-data": "1.0"
     }
 }
