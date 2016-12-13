@@ -13,7 +13,7 @@ Esta library, contempla:
 ```
 composer require diego-brocanelli/validators-zf dev-master
 ```
-ou inserindo no arquivo composer.json e executanto comando composer isntall.
+ou inserindo no arquivo composer.json e executando comando composer install.
 ```
 {
     "require": {
