@@ -84,4 +84,24 @@ class CNPJTest extends TestCase
     {
         $this->assertEquals(false, $this->CNPJValidator->isValid('99999999999999') );
     }
+
+    public function testLessCharacter()
+    {
+        $this->assertEquals(false, $this->CNPJValidator->isValid('99999') );
+    }
+
+    public function testAboveAllowed()
+    {
+        $this->assertEquals(false, $this->CNPJValidator->isValid('999999999999999999') );
+    }
+
+    public function testSpecialCharacters()
+    {
+        $this->assertEquals(false, $this->CNPJValidator->isValid('99.333-333*333@--23421--134,0') );
+    }
+
+    public function testCharacters()
+    {
+        $this->assertEquals(false, $this->CNPJValidator->isValid('asdfgtrebhytfe') );
+    }
 }
