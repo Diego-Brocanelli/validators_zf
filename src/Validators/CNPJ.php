@@ -12,9 +12,7 @@ class CNPJ extends AbstractValidator
 {
     const INVALID_CNPJ = 'The given CNPJ information invalid.';
 
-    protected $messageTemplates = array(
-        self::INVALID_CNPJ => self::INVALID_CNPJ
-    );
+    protected $messageTemplates = array( self::INVALID_CNPJ => self::INVALID_CNPJ );
 
     private $blackList = array(
         '00000000000000',
@@ -37,13 +35,14 @@ class CNPJ extends AbstractValidator
      */
     public function isValid($cnpj)
     {
-        $cnpj = $this->sanitizeString($cnpj);
+        $cnpj = (int)$cnpj;
         
         if(empty($cnpj) || in_array($cnpj, $this->blackList) || strlen($cnpj) != 14){
             $this->error(self::INVALID_CNPJ);
 
             return false;
         }
+        
         $CNPJValidator = new ValidateCNPJ();
         
         if(!$CNPJValidator->isValid($cnpj)){
@@ -53,22 +52,5 @@ class CNPJ extends AbstractValidator
         }
 
         return true;
-    }
-    
-    /**
-     * Remover ".", ",", "-", "/" da string.
-     * 
-     * @param string $value
-     * @return string
-     */
-    private function sanitizeString($value)
-    {
-        $cnpj = str_replace(
-            array(',','.','-', '/'), 
-            array('', '', '', ''), 
-            $value
-        );
-        
-        return $cnpj;
     }
 }
