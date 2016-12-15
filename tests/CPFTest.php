@@ -81,4 +81,25 @@ class CPFTest extends TestCase
     {
         $this->assertEquals(false, $this->CPFValidator->isValid('99999999999') );
     }
+
+    public function testLessCharacter()
+    {
+        $this->assertEquals(false, $this->CPFValidator->isValid('99999') );
+    }
+
+    public function testAboveAllowed()
+    {
+        $this->assertEquals(false, $this->CPFValidator->isValid('999999999999999999') );
+    }
+
+    public function testSpecialCharacters()
+    {
+        $this->assertEquals(false, $this->CPFValidator->isValid('99.333-333*333@') );
+    }
+
+    public function testSCharacters()
+    {
+        $this->assertEquals(false, $this->CPFValidator->isValid('asdfghjklop') );
+    }
 }
+
