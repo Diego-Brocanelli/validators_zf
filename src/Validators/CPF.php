@@ -37,11 +37,7 @@ class CPF extends AbstractValidator
      */
     public function isValid($cpf)
     {
-        $cpf = str_replace(
-            array(',','.','-'), 
-            array('', '', ''), 
-            $cpf
-        );
+        $cpf  = preg_replace("/[^0-9]/", "", $cpf);
         
         if(empty($cpf) || in_array($cpf, $this->blackList) || strlen($cpf) != 11){
             $this->error(self::INVALID_CPF);
