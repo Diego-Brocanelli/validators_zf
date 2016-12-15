@@ -22,7 +22,7 @@ ou inserindo no arquivo composer.json e executando comando composer install.
 }
 ```
 
-# Tests
+# Testes
 ```
 php phpunit.phar tests/
 ```
@@ -51,6 +51,10 @@ $inputFilter->add(array(
                 ),
             ));
 ```
+Caso CPF inválido:
+```
+//output messge: The given CPF information invalid.
+```
 
 # CNPJ Validator - Implementação na entity ZF .
 ```
@@ -76,7 +80,10 @@ $inputFilter->add(array(
                 ),
             ));
 ```
-   
+Caso CNPJ inválido:
+```
+//output messge: The given CPF information invalid.
+```
 # To-do list  
 
 * [X] CPF
