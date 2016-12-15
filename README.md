@@ -6,6 +6,10 @@ Esta library, contempla:
    - CNPJ
    - Data (pt-br)
 
+# Validado 
+* [ ] ZF2
+* [X] ZF3
+
 # Install
 
 ##### Composer
